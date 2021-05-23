@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements AIListener{
         myref.keepSynced(true);
 
         //addListenerForSingleValueEvent is used as we need to load the data from firebase databsae only once, in the beginning
-        myref.child("chat").addListenerForSingleValueEvent(new ValueEventListener() {
+        myref.child("chat").child("user1").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements AIListener{
 
                 String message = etMessage.getText().toString().trim();
                 final ChatMessage chatMessage = new ChatMessage(message, "user");
-                myref.child("chat").push().setValue(chatMessage);
+                myref.child("chat").child("user1").push().setValue(chatMessage);
                 chatMessages.add(chatMessage);
 
                 //adapter is initialised to handle views in the recyclerview
@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements AIListener{
                             //In adapter, the onbindviewholder is segregating the messages based on user
                             //So bot Chatessages are with user="bot"
                             ChatMessage chatMessage = new ChatMessage(reply, "bot");
-                            myref.child("chat").push().setValue(chatMessage);
+                            myref.child("chat").child("user1").push().setValue(chatMessage);
                             chatMessages.add(chatMessage);
                             //adapter is initialised to handle views in the recyclerview
                             adapter = new MyAdapter(MainActivity.this, chatMessages);
