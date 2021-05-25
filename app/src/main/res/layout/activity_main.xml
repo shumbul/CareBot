@@ -10,7 +10,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#C86565"
+        android:background="#60C255"
         android:clipToPadding="false"
         android:paddingTop="10dp"
         android:paddingBottom="50dp" />
