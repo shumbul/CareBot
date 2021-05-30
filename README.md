@@ -6,6 +6,10 @@ An AI-powered Intelligent Virtual Assistant
 
 A chatbot for e-commerce gives you the power to engage with new, existing, and potential customers with real-time, text-style messaging, without the involvement of the live person
 
+# Video link
+1. [Demo](https://youtu.be/7LT5Znzt5ec)
+2. [Code Explaination](https://youtu.be/palhmXHZH50)
+
 # Benefits
 
 1. Cost efficiencies: 
